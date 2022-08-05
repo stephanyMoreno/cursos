@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+<script src="variableTipos.js"></script>
+-->
+   <!--
+<script src="letConst.js"></script> -->
+<!--
+<script src="opeText.js"></script>
+<script src="arreglo.js"></script> 
+<script src="funcion.js"></script>
+<script src="condicionales.js"></script> 
+<script src="ciclofor.js"></script> -->
+
+<!---
+<script src="experimentos.js"></script>  -->
+
+
+        
+
+
+
+
+
+
+
+
+
+    <!-- <table>
+        <thead>
+            <tr>
+                <th>Nombre 1</th>
+                <th>Nombre 2</th>
+                <th>Nombre 3</th>
+            </tr>
+        </thead> -->
+
+        <!-- <tbody >
+            <tr id="tabla">
+
+            </tr>
+        </tbody> -->
+
+
+        <div id="fecha_Min"></div>
+        
+        <div id="fecha_Max"></div>
+
+    <!-- </table>
+    <button type="reset" id="borrar" onclick="borrar()">reset</button> -->
+
+    <script>
+        empresa();
+        function empresa(){
+        var empresa=["05-12-2022","12-01-2019","10-23-1997", "05-02-2022","12-01-2020","12-01-2018"];
+        //var tabla=document.getElementById("tabla");
+
+        var fecha1 = document.getElementById("fecha_Min");
+        var fecha2 = document.getElementById("fecha_Max");
+
+        for(i=0; i < empresa.length; i++){
+            //tabla.innerHTML+= "<th>" + empresa[i] + "</th>";
+            
+            console.log(empresa[i]);
+        }
+
+        let arrayFechas = empresa.map((fechaActual) => new Date(fechaActual));
+
+        var max = new Date(Math.max.apply(null,arrayFechas));
+        var min = new Date(Math.min.apply(null,arrayFechas));
+
+        console.log(min);
+        console.log(max);
+
+        // fecha1.innerHTML+= "<h1>" + min +"</h1>";
+        // fecha2.innerHTML+= "<h1>" + max + "</h1>";
+        //fecha1.innerHTML = <h1>${max + "ultima fecha registro"}</h1>
+        //fecha2.innerHTML = <h1>${min + "fecha minina"}</h1>
+
+
+        }
+        function borrar(){
+            document.getElementById("tabla").innerHTML="";  
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
